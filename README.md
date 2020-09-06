@@ -48,6 +48,7 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
     | :-: | :-- |
     | dev | http://localhost:8080/swagger-ui.html |
     | prd | https://forum-app-rp.herokuapp.com/swagger-ui.htm |
+
     ![forum-app](forum-app.png)
 
 - forum-monitor
@@ -57,4 +58,5 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
     | :-: | :-- |
     | dev | http://localhost:8081 |
     | prd | https://forum-monitor-rp.herokuapp.com |
+
     ![forum-monitor](forum-monitor.png)
