@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  forum-monitor:
+    build:
+      context: ./forum-monitor
+      dockerfile: Dockerfile
+    environment:
+      - SERVER_PORT=8081
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - 8081:8081
+
+  forum-app:
+    build:
+      context: ./forum-app
+      dockerfile: Dockerfile
+    environment:
+      - FORUM_APP_DATASOURCE_PASSWORD=
+      - FORUM_APP_DATASOURCE_URL=jdbc:h2:mem:alura-forum
+      - FORUM_APP_DATASOURCE_USERNAME=sa
+      - FORUM_APP_JWT_SECRET=rm'!@N=Ke!~p8VTA2ZRK~nMDQX5Uvm!m'D&]{@Vr?G;2?XhbC:Qa#9#eMLN\}x3?JR3.2zr~v)gYF^8\:8>:XfB:Ww75N/emt9Yj[bQMNCWwW\J?N,nvH.<2\.r~w]*e~vgak)X"v8H`MH/7"2E`,^k@n<vE-wD3g9JWPy;CrY*.Kd2_D])=><D?YhBaSua5hW%{2]_FVXzb9`8FH^b[X3jzVER&:jw2<=c38=>L/zBq`}C6tT*cCSVC^c]-L}&/
+      - FORUM_MONITOR_URL=http://forum-monitor:8081
+      - SERVER_PORT=8080
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - 8080:8080
+    depends_on:
+      - forum-monitor
