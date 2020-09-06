@@ -7,7 +7,9 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or later
 - [Maven 3.2+](https://maven.apache.org/download.cgi)
 
-## Usage
+## Run
+
+### Manual
 
 - forum-app
 
@@ -16,8 +18,6 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
     $ ./mvnw spring-boot:run
     ```
 
-    ![forum-app](forum-app.png)
-
 - forum-monitor
 
     ```bash
@@ -25,4 +25,29 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
     $ ./mvnw spring-boot:run
     ```
 
+### Container
+
+- Start
+
+    ```bash
+    $ cd forum-app && ./mvnw clean package && cd ../forum-monitor && ./mvnw clean package
+    $ docker-compose up --build
+    ```
+
+- Stop
+
+    ```bash
+    $ docker-compose down
+    ```
+
+## Usage
+
+- forum-app
+
+    > http://localhost:8080/swagger-ui.html
+    ![forum-app](forum-app.png)
+
+- forum-monitor
+
+    > http://localhost:8081
     ![forum-monitor](forum-monitor.png)

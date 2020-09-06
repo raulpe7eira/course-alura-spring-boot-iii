@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - SERVER_PORT=8081
-      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_PROFILES_ACTIVE=prod
     ports:
       - 8081:8081
 
@@ -23,7 +23,7 @@ services:
       - FORUM_APP_JWT_SECRET=rm'!@N=Ke!~p8VTA2ZRK~nMDQX5Uvm!m'D&]{@Vr?G;2?XhbC:Qa#9#eMLN\}x3?JR3.2zr~v)gYF^8\:8>:XfB:Ww75N/emt9Yj[bQMNCWwW\J?N,nvH.<2\.r~w]*e~vgak)X"v8H`MH/7"2E`,^k@n<vE-wD3g9JWPy;CrY*.Kd2_D])=><D?YhBaSua5hW%{2]_FVXzb9`8FH^b[X3jzVER&:jw2<=c38=>L/zBq`}C6tT*cCSVC^c]-L}&/
       - FORUM_MONITOR_URL=http://forum-monitor:8081
       - SERVER_PORT=8080
-      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_PROFILES_ACTIVE=prod
     ports:
       - 8080:8080
     depends_on:
