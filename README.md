@@ -30,8 +30,9 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
 - Start
 
     ```bash
-    $ cd forum-app && ./mvnw clean package && cd ../forum-monitor && ./mvnw clean package
-    $ docker-compose up --build
+    $ cd forum-app && ./mvnw clean package
+    $ cd ../forum-monitor && ./mvnw clean package
+    $ cd ../ && docker-compose up --build
     ```
 
 - Stop
@@ -47,7 +48,7 @@ Result of course **[Spring Boot Parte 3: Profiles, Testes e Deploy](https://curs
     | ENV | URL |
     | :-: | :-- |
     | dev | http://localhost:8080/swagger-ui.html |
-    | prd | https://forum-app-rp.herokuapp.com/swagger-ui.htm |
+    | prd | https://forum-app-rp.herokuapp.com/swagger-ui.html |
 
     ![forum-app](forum-app.png)
 
